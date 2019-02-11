@@ -1,0 +1,39 @@
+
+{
+  "pages": [
+      "pages/home/home",
+      "pages/shop/shop",
+      "pages/pay/pay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "购物天地",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#A0A0A0",
+    "selectedColor": "#FF3300",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath":"pages/img/home.png",
+        "selectedIconPath": "pages/img/home1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "iconPath":"pages/img/shop.png",
+        "selectedIconPath": "pages/img/shop1.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/pay/pay",
+        "iconPath":"pages/img/pay.png",
+        "selectedIconPath": "pages/img/pay1.png",
+        "text": "消费情况"
+      }
+    ]
+  }
+}
