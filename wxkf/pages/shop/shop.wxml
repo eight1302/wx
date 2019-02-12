@@ -1,1 +1,33 @@
-jnhgfjhng
+
+ <view class="specialPrice">
+    <block wx:for="{{carts}}">
+        <view class="goodsList">
+            <icon wx:if="{{item.selected}}" type="success" color="red" bindtap="selectList" data-index="{{index}}" style="float:left;"/>
+            <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}" style="float:left;"/>
+            <image class="goodsPic" src='{{item.img}}'></image>
+            <view class="goodsInfo">
+                <view class="goodsTitle ellipsis2">{{item.title}}</view>
+                <view class="price">
+                    <text class="fl newPrice">￥{{item.price}}</text>
+                     <view>
+                        <image class="fr car1" src='../img/delete.png' bindtap="deleteList" data-index="{{index}}"></image>
+                    </view>
+                </view>
+                
+            </view>
+        </view>
+    </block>
+</view>
+
+<!-- 底部操作栏 -->
+<view>
+    <!-- wx:if 是否全选显示不同图标 -->
+    <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#fff" bindtap="selectAll"/>
+    <icon wx:else type="circle" color="#fff" bindtap="selectAll"/>
+    <text bindtap="selectAll">全选</text>
+    <!-- 总价 -->
+    <text>￥{{totalPrice}}</text>
+</view>
+<view style="margin-top:40rpx;">
+   <button type="primary" data-pay="{{totalPrice}}" data-carts="{{carts}}" style="width:80%;margin-left:10%;" bindtap="pay_on">支付</button>
+</view>

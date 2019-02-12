@@ -1,7 +1,27 @@
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" style='height:{{height*2}}rpx;width:100%;' mode="aspectFill"/>
-    </swiper-item>
-  </block>
-</swiper>
+<scroll-view scroll-y="true">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+            <image src="{{item}}" class="slide-image" style='height:{{height*2}}rpx;width:100%;' mode="aspectFill"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="specialPrice">
+        <view class="title">今日特价</view>
+        <block wx:for="{{goodsList}}">
+            <view class="goodsList">
+                <image class="goodsPic" src='{{item.imgUrl}}'></image>
+                <view class="goodsInfo">
+                    <view class="goodsTitle ellipsis2">{{item.title}}</view>
+                    <view class="price">
+                        <text class="fl newPrice">￥{{item.newPrice}}</text>
+                        <text class="fl oldPrice">￥{{item.oldPrice}}</text>
+                        <view>
+                            <image class="fr car1" src='../img/shop1.png' data-id="{{item.id}}" data-img="{{item.imgUrl}}" data-title="{{item.title}}" data-price="{{item.newPrice}}" bindtap='goToDetail'></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</scroll-view>

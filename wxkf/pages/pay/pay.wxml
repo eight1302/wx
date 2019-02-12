@@ -1,1 +1,16 @@
-支付
+  <view style="margin-top:40rpx;text-align:center;color:red;">
+    <p>{{payAll}}</p>
+  </view>
+ <view class="specialPrice">
+    <block wx:for="{{carts}}">
+      <view class="goodsList">
+        <image class="goodsPic" src='{{item.img}}'></image>
+        <view class="goodsInfo">
+          <view class="goodsTitle ellipsis2">{{item.title}}</view>
+          <view class="price">
+            <text class="fl newPrice">￥{{item.price}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>

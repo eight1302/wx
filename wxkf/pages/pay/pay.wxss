@@ -1,0 +1,122 @@
+.kindList {
+    padding-top: 20rpx;
+    background: #fff;
+}
+
+.kindList .flex-item {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.flex-item image {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 0 auto;
+}
+
+.imageGroup image {
+    width: 100px;
+    height: 100px;
+}
+
+.flex-item text {
+    text-align: center;
+    padding: 10rpx 0 20rpx;
+    display: block;
+    font-size: 28rpx;
+}
+
+.search {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    width: 86%;
+    padding: 12rpx 0;
+    margin: 30rpx auto;
+    border: 1px solid #d8d8d8;
+    border-radius: 16rpx;
+    background: #fff;
+    color: #999;
+}
+
+.search image {
+    width: 40rpx;
+    height: 40rpx;
+    margin: 0 10rpx;
+}
+
+.specialPrice {
+    padding: 0 30rpx;
+}
+
+.title {
+    margin: 20rpx 0;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 10rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.goodsList {
+    padding: 20rpx;
+    border-bottom: 1px solid #d8d8d8;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.goodsList:last-child {
+    border-bottom: none;
+}
+
+.goodsList .goodsPic {
+    width: 180rpx;
+    height: 180rpx;
+    border: 1px solid #d8d8d8;
+}
+
+.goodsInfo {
+    padding: 0 20rpx;
+    position: relative;
+    flex: 1;
+}
+
+.goodsTitle {
+    font-size: 32rpx;
+    font-family: '微软雅黑';
+}
+
+.price {
+    position: absolute;
+    left: 20rpx;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-end;
+}
+
+.price .newPrice {
+    font-size: 36rpx;
+    margin-top: 10rpx;
+    margin-right: 10rpx;
+}
+
+.price .oldPrice {
+    text-decoration: line-through;
+    color: #d8d8d8;
+    font-size: 28rpx;
+    margin-top: 20rpx;
+    align-items: -webkit-flex-end;
+}
+
+.price view {
+    flex: 1;
+}
+
+.car1 {
+    width: 56rpx;
+    height: 56rpx;
+    float:right;
+    border-radius: 50%;
+}
